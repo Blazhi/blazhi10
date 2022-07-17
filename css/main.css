@@ -31,6 +31,8 @@ ul, ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -61,7 +63,6 @@ a {
   padding-right: 15px;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 480px) {
   .container {
     max-width: 480px;
@@ -77,6 +78,7 @@ a {
     max-width: 1200px;
   }
 }
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -578,10 +580,12 @@ a {
   margin-bottom: 50px;
 }
 
-.team__list {
-  display: flex;
-  justify-content: center;
-  margin-left: -30px;
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    margin-left: -30px;
+    flex-wrap: wrap;
+  }
 }
 
 /*.team-item + .team-item{
@@ -595,6 +599,7 @@ a {
   border-radius: 0px 0px 4px 4px;
   background-color: #FFFFFF;
   margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 .team__name {
