@@ -1,5 +1,9 @@
 .job{
     padding-top: 0px;
+
+    @media screen and (max-width: 1200px){
+        display: none;
+    }
 }
 .job__tittle {
     font-weight: 700;
