@@ -14,12 +14,21 @@
     margin-bottom: 50px;
 }
 .team__list{
-    @media screen and (min-width: 768px){
-        display: flex;
-        margin-left: -30px;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
 }
+
+//@media screen and (min-width: 768px){
+  //  flex-basis:calc(50% - 30px);
+ //   margin:15px;
+  //  display: flex;
+   // justify-content: center;
+
+
+//@media screen and (min-width: 1200px){
+  //  flex-basis:calc(25% - 30px);
+
     //display: flex;
    // justify-content: center;
    // margin-left: -30px;
@@ -38,8 +47,8 @@
 }
 
 .team__item{
-    width: 450px;
-    height: 622px;
+  //  width: 450px;
+  //  height: 622px;
     
 
     text-align: center;
@@ -50,13 +59,11 @@
     margin-bottom: 30px;
 
     @media screen and (min-width: 768px){
-        width: 354px;
-        height: 536px;
+        flex-basis: calc(50% - 30px);
+        margin: 15px;
     }
-
-    @media screen and (min-width: 1200px){
-        width: 270px;
-        height: 428px;
+    @media screen and (min-width:1200px){
+        flex-basis: calc(25% - 30px);
     }
 }
 
@@ -86,22 +93,7 @@
 .social-list {
     display: flex;
     justify-content: center;
-    margin: -15px;
-
-    @media screen and (min-width: 768px){
-        flex-basis:calc(50% - 30px);
-        margin:15px;
-    }
-
-    @media screen and (min-width: 1200px){
-        flex-basis:calc(25% - 30px);
-    }
 }
-
-@media screen and (max-width: 767px){
-    .social-list:not(:last-child){margin-bottom:30px}
-}
-
 
 .social-list__item{
     margin-left: 10px;
