@@ -1,11 +1,13 @@
 .header-content{
     display: flex;
     align-items: center;  
+    
 }
 
 .header{
     background-color:  var(--background-color);
     border-bottom: 1px solid #ececec;
+    position: relative;
 }
 
 
@@ -13,7 +15,7 @@
     margin-right: 93px;
 }
 .header__nav-list{
-    display: flex;
+    display: none;
 
     &> :not(:last-child) {
         margin-right: 50px;
@@ -56,7 +58,7 @@
 
 
 .contacts{
-       display: flex;
+    display: none;
     margin-left: auto;
 }
 
@@ -82,4 +84,42 @@
         &:focus {
             color: var(--color-accent);
         }
+}
+
+
+
+
+.menu-btn{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: tomato;
+    margin-left: auto;
+}
+
+.menu-btn .icon-menu{
+    display: none;
+}
+
+.menu-btn.is-open .icon-menu{
+    display: block;
+}
+
+.menu-btn.is-open .icon-close{
+    display: none;
+}
+
+.menu-mob{
+    display: none;
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 100%;
+    background-color:teal;
+    padding: 20px;
+
+    &.is-open{
+        display: block;
+    }
 }
