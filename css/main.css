@@ -998,7 +998,6 @@ a {
 
 .subscibe__email-input {
   width: 100%;
-  width: 450px;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1006,6 +1005,11 @@ a {
   border-radius: 4px;
   padding-left: 16px;
   color: #FFFFFF;
+}
+@media screen and (min-width: 480px) {
+  .subscibe__email-input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .subscibe__email-input {
