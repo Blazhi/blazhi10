@@ -860,9 +860,6 @@ a {
   }
 }
 
-.footer-container {
-  align-items: baseline;
-}
 @media screen and (min-width: 768px) {
   .footer-container {
     display: flex;
