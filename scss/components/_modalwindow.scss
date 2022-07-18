@@ -4,7 +4,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-  
+    overflow: scroll;
     background: rgba(0, 0, 0, 0.2);
     transition: opacity var(--hover-focus-duration) cubic-bezier(0.4, 0, 0.2, 1),
       visibility var(--hover-focus-duration) cubic-bezier(0.4, 0, 0.2, 1);
@@ -20,16 +20,21 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 528px;
+    width: 95vw;
     min-height: 581px;
   
     background: var(--background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-  
     transform: translate(-50%, -50%) scale(1);
     transition: var(--hover-focus-duration) cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 480px){
+        width: 400px;
+    }
+    @media screen and (min-width: 1200px){
+        width: 500px;
+    }
 }
 
 .backdrop.is-hidden .modal-window {

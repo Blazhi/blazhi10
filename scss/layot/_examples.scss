@@ -1,23 +1,25 @@
 .examples__list{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     margin-bottom: 50px;
-
-    @media screen and (min-width: 480px){
-        flex-wrap: wrap;
-        justify-content: flex-start;}
-
     @media screen and (min-width: 768px){
-        display: flex;
         justify-content: center;
-        margin-bottom: 50px;
+
     }
 }
 
 .examples__item:not(:last-child){
 margin-right: 8px;
 }
-
+.examples__item{
+    @media screen and (max-width: 767px){
+        margin-bottom: 15px;
+    }
+    @media screen and (min-width: 768px){
+        margin-bottom: 30px;
+    }
+}
 .examples__btn{
 display: inline-block;
 padding: 6px 22px;
@@ -44,10 +46,5 @@ box-shadow var(--hover-focus-duration) cubic-bezier(0.4, 0, 0.2, 1);
 
         
         
-@media screen and (min-width: 480px){
-    margin-bottom: 15px;
-}
-@media screen and (min-width: 768px){
-    margin-bottom: 30px;
-}
+
 }
