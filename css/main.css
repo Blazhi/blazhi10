@@ -482,16 +482,34 @@ a {
 }
 
 .advantages-list {
-  display: flex;
-  justify-content: center;
+  /*display: flex;
+  justify-content: center;*/
 }
-
-.advantages-list__item + .advantages-list__item {
-  margin-left: var(--typical-gap);
+@media screen and (min-width: 768px) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    margin-left: -30px;
+  }
 }
 
 .advantages-list__item {
-  min-width: 270px;
+  /*min-width: 270px;*/
+  margin-bottom: var(--typical-gap);
+}
+@media screen and (min-width: 768px) {
+  .advantages-list__item {
+    flex-basis: calc(50% - 30px);
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages-list__item {
+    flex-basis: calc(25% - 30px);
+  }
 }
 
 .advantages-list__cont {
@@ -676,14 +694,39 @@ a {
 .clients__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-left: -30px;
 }
 
 .clients__item {
   width: 170px;
   height: 92px;
+  margin-bottom: 30px;
 }
 .clients__item + .clients__item {
   margin-left: var(--typical-gap);
+}
+@media screen and (max-width: 479px) {
+  .clients__item {
+    flex-basis: calc(50% - 30px);
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .clients__item {
+    flex-basis: calc(50% - 30px);
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    flex-basis: calc(33.3333333333% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    flex-basis: calc(16.6666666667% - 30px);
+  }
 }
 
 .clients__link {
@@ -811,10 +854,38 @@ a {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (max-width: 1200px) {
+  .footer {
+    text-align: center;
+  }
+}
 
 .footer-container {
-  display: flex;
   align-items: baseline;
+}
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-container {
+    padding-left: 61px;
+    padding-right: 74px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__addres-container {
+    margin-bottom: 60px;
+  }
 }
 
 .footer__logo {
@@ -823,10 +894,11 @@ a {
   margin-bottom: 20px;
 }
 
-.adress__item {
-  margin-bottom: 9px;
+@media screen and (min-width: 1200px) {
+  .adress__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
-
 .adress__link {
   font-weight: 400;
   font-size: 14px;
@@ -848,8 +920,20 @@ a {
   color: var(--color-accent);
 }
 
-.footer-soc {
-  margin-left: 70px;
+@media screen and (max-width: 767px) {
+  .footer-soc {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-soc {
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-soc {
+    margin-left: 70px;
+  }
 }
 
 .footer-soc__tittle {
@@ -865,7 +949,17 @@ a {
 
 .footer-soc__list {
   display: flex;
-  align-items: baseline;
+}
+@media screen and (max-width: 767px) {
+  .footer-soc__list {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-soc__list {
+    align-items: baseline;
+  }
 }
 
 .footer-soc__item + .footer-soc__item {
@@ -882,8 +976,16 @@ a {
   fill: #FFFFFF;
 }
 
-.subscribe {
-  margin-left: 93px;
+@media screen and (min-width: 768px) {
+  .subscribe {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    margin-left: 93px;
+  }
 }
 
 .subscibe__tittle {
@@ -898,7 +1000,8 @@ a {
 }
 
 .subscibe__email-input {
-  width: 358px;
+  width: 100%;
+  width: 450px;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -906,6 +1009,11 @@ a {
   border-radius: 4px;
   padding-left: 16px;
   color: #FFFFFF;
+}
+@media screen and (min-width: 1200px) {
+  .subscibe__email-input {
+    max-width: 358px;
+  }
 }
 
 .subscibe__btn {
@@ -926,6 +1034,11 @@ a {
 }
 .subscibe__btn:hover, .subscibe__btn:focus {
   background-color: #212121;
+}
+@media screen and (max-width: 1200px) {
+  .subscibe__btn {
+    margin-top: 20px;
+  }
 }
 
 .subscibe__icon {
