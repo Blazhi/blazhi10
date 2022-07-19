@@ -474,6 +474,11 @@ a {
   color: #212121;
 }
 
+.menu-mob__item:hover,
+.menu-mob__item:focus {
+  color: var(--color-accent);
+}
+
 .menu-mob__item:not(:last-child) {
   margin-bottom: 32px;
 }
