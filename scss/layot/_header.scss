@@ -69,15 +69,17 @@
 
     @media screen and (min-width:768px){
         flex-direction: column;
-        margin-left: auto;
-    }
+        margin-left: auto;}
+
      @media screen and (min-width:1200px){
         display: flex;
         flex-direction: row;
         margin-left: auto;
      }
 }
-
+.contacts__item:not(:last-child){
+    margin-bottom: 10px;
+}
 .contacts .contacts__item +.contacts__item{
     @media screen and (min-width:1200px){
         margin-left: 50px;
