@@ -40,6 +40,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+body.menu-open, body.modal-open {
+  overflow: hidden;
+}
+
 .list {
   list-style: none;
 }
@@ -85,7 +89,7 @@ a {
   left: 0;
   height: 100%;
   width: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   background: rgba(0, 0, 0, 0.2);
   transition: opacity var(--hover-focus-duration) cubic-bezier(0.4, 0, 0.2, 1), visibility var(--hover-focus-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }

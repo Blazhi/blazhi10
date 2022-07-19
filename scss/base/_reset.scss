@@ -22,6 +22,9 @@ body{
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
+body.menu-open,body.modal-open{
+    overflow:hidden;
+}
  
 .list{
     list-style: none;
